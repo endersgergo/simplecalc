@@ -1,0 +1,34 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "simplecalc"
+version = "${version}"
+displayName = "SimpleCalc"
+authors = "enderReloaded (Ender S. Gergő)"
+description = '''A (truly) simple calc command provider using objecthunter's exp4j library.'''
+#logoFile = ""
+
+[[dependencies.simplecalc]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.simplecalc]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.simplecalc]]
+modId = "architectury"
+type = "required"
+versionRange = "[13.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+

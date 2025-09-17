@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "simplecalc",
+  "version": "${version}",
+  "name": "SimpleCalc",
+  "description": "A (truly) simple /calc command provider using objecthunter's exp4j library for expression evaluation.",
+  "authors": [ "enderReloaded (Ender S. Gergő)" ],
+  "contact": {
+    "homepage": "TBC"
+  },
+  "license": "MIT",
+  "icon": "assets/simplecalc/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "hu.ender.simplecalc.fabric.SimpleCalcFabric"
+    ], "client": [
+      "hu.ender.simplecalc.fabric.client.SimpleCalcFabricClient"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.2", "minecraft": "~1.21.1", "java": ">=21", "architectury": ">=13.0.8", "fabric-api": "*"
+  },
+  "suggests": {
+  }
+}
