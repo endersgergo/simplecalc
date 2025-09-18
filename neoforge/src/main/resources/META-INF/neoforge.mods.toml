@@ -8,8 +8,8 @@ modId = "simplecalc"
 version = "${version}"
 displayName = "SimpleCalc"
 authors = "enderReloaded (Ender S. Gergő)"
-description = '''A (truly) simple calc command provider using objecthunter's exp4j library.'''
-#logoFile = ""
+description = '''A (truly) simple /calc command provider for Minecraft using objecthunter's exp4j expression parser and evaluation library.'''
+logoFile = "assets/simplecalc/icon.png"
 
 [[dependencies.simplecalc]]
 modId = "neoforge"

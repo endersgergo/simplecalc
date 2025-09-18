@@ -3,7 +3,7 @@
   "id": "simplecalc",
   "version": "${version}",
   "name": "SimpleCalc",
-  "description": "A (truly) simple /calc command provider using objecthunter's exp4j library for expression evaluation.",
+  "description": "A (truly) simple /calc command provider for Minecraft using objecthunter's exp4j expression parser and evaluation library.",
   "authors": [ "enderReloaded (Ender S. Gergő)" ],
   "contact": {
     "homepage": "TBC"
@@ -21,7 +21,7 @@
   "mixins": [
   ],
   "depends": {
-    "fabricloader": ">=0.17.2", "minecraft": "~1.21.1", "java": ">=21", "architectury": ">=13.0.8", "fabric-api": "*"
+    "fabricloader": ">=0.17.2", "minecraft": "~1.21.1", "java": ">=21", "architectury": ">=13.0.8"
   },
   "suggests": {
   }
