@@ -2,6 +2,7 @@ plugins {
     id 'dev.architectury.loom' version '1.11-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id "com.modrinth.minotaur" version "2.+" apply false
 }
 
 architectury {
@@ -17,6 +18,7 @@ subprojects {
     apply plugin: 'dev.architectury.loom'
     apply plugin: 'architectury-plugin'
     apply plugin: 'maven-publish'
+    apply plugin: 'com.modrinth.minotaur'
 
     base {
         // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
@@ -69,5 +71,16 @@ subprojects {
             // The repositories here will be used for publishing your artifact, not for
             // retrieving dependencies.
         }
+    }
+    if (project.name == "common")
+        tasks.modrinth.enabled = false
+    modrinth {
+        token = System.getenv("MODRINTH_TOKEN") // Remember to have the MODRINTH_TOKEN environment variable set or else this will fail - just make sure it stays private!
+        projectId = "simplecalc" // This can be the project ID or the slug. Either will work!
+        versionNumber = "${version}" // You don't need to set this manually. Will fail if Modrinth has this version already
+        versionType = "release" // This is the default -- can also be `beta` or `alpha`
+        uploadFile = remapJar // With Loom, this MUST be set to `remapJar` instead of `jar`!
+        gameVersions = ["$minecraft_version"] // Must be an array, even with only one version
+        loaders = ["${project.name}"] // Must also be an array - no need to specify this if you're using Loom or ForgeGradle
     }
 }
