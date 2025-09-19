@@ -19,4 +19,4 @@ Contributions are welcome, but remember to use common sense and keep new feature
  - [exp4j](https://lallafa.objecthunter.net/exp4j/license.html) - Apache License 2.0
 
 ## Credits
-Big thanks to objecthunter! Without their exp4j library, this wouldn't have been possible (hassle-free least).
+Big thanks to objecthunter! Without their exp4j library, this wouldn't have been possible (hassle-free, at least).
